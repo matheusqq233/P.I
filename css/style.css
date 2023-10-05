@@ -1,66 +1,91 @@
+/* Estilos globais */
 body {
+ background-color: 	#FAF0E6;
     margin: 0;
     font-family: Arial, sans-serif;
     text-align: center;
 }
 
-.navbar {
-    background-color: #333;
-    overflow: hidden;
-    padding: 10px 20px;
-}
-
-.project-name {
-    color: white;
-    font-size: 24px;
-    float: left;
-    margin-right: 20px;
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-}
-
-.navbar a.btn {
-    background-color: #7b59b7;
-    float: right; /* Adicionando float para posicionar no canto direito */
-    margin-left: 10px; /* Espaçamento entre os botões */
-}
-
-.navbar a.btn:first-child {
-    margin-left: 0; /* Remove a margem do primeiro botão para evitar espaçamento extra */
-}
-
-.navbar a.btn:hover {
-    background-color: #a084d9;
-}
-
-.content {
-    padding: 20px;
-    text-align: center;
-    display: flex;
-}
-
-.left-content {
-    padding: 20px;
-    max-width: 600px;
-}
-
+/* Estilos para a seção .right-content */
 .right-content {
-    margin-top: 20px;
+    margin-top: 130px;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
+/* Estilos para a tabela de comparação */
 .comparison-table {
+    margin-top: -310px;
     display: table;
     width: 100%;
     border-collapse: collapse;
+}
+
+.image-container {
+    text-align: center;
+    margin: 200px; /* Aumentei a margem para criar um "box" maior */
+    border: 2px solid #7b59b7;
+    background-color: #7b59b7;
+    border-radius: 5px;
+    padding: 60px; /* Aumentei o preenchimento para criar um "box" maior */
+    display: inline-block; /* Torna o contêiner do tamanho do conteúdo (imagem) */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Estilos para a seção .image-container img */
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove espaço extra abaixo da imagem */
+}
+
+/* Estilos para o texto das imagens coloridas */
+.image-container h1, .image-container h2 {
+    font-size: 24px;
+    color: #7b59b7;
+    margin-top: 10px;
+}
+
+/* Estilos para o hover das imagens coloridas */
+.image-container:hover {
+    background-color: #a084d9;
+    transform: scale(1.05);
+}
+
+/* Estilos para o contêiner principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Isso centralizará verticalmente na janela do navegador */
+}
+
+/* Estilos para as caixas de texto */
+.text-box {
+    margin-top: -300px;
+    flex: 1; /* Cada caixa de texto ocupa 1/3 da largura */
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-box p {
+    color: white; /* Cor do texto */
+    font-size: 24px;
+    margin: 0;
+    padding: 10px; /* Espaçamento interno */
+}
+
+/* Cores de fundo */
+.blue-bg {
+    background-color: blue;
+}
+
+.purple-bg {
+    background-color: purple;
+}
+
+.green-bg {
+    background-color: green;
 }
 
 .row {
@@ -83,6 +108,7 @@ img {
     text-align: left;
     font-weight: bold;
 }
+
 .row:nth-child(odd) {
     background-color: #f5f5f5;
 }
@@ -101,22 +127,252 @@ img {
     text-align: left;
     padding-left: 20px;
 }
-.social-media {
+
+/* Estilos para a seção .content */
+.content {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para a seção .left-content */
+.left-content {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.content, .imgs, .imgss {
+    display: none;
+}
+
+.left-content h2 {
+    font-size: 36px;
+}
+
+.left-content p {
+    font-size: 24px;
+}
+
+.left-content .btn {
+    background-color: #483D8B; /* Cor de fundo roxa */
+    color: white; /* Cor do texto branco */
+    text-decoration: none; /* Remover sublinhado do link */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 18px; /* Tamanho da fonte */
+    border-radius: 5px; /* Borda arredondada */
+    border: 2px solid #a084d9; /* Borda roxa com 2px de largura */
+    transition: background-color 0.3s, border 0.3s; /* Transições suaves de cor de fundo e borda */
+}
+
+.left-content .btn:hover {
+    background-color: #a084d9; /* Cor de fundo roxa mais clara no hover */
+    border: 2px solid #7b59b7; /* Borda roxa mais escura no hover */
+}
+
+.content {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    align-items: left;
+    text-align: left;
+    height: 100vh; /* Ajuste a altura conforme necessário */
 }
 
-.social-media a {
-    margin: 0 10px;
+/* Estilos para o contêiner quadrado */
+.box {
+    display: flex;
+    align-items: center;
+    background-color: #7b59b7; /* Cor de fundo roxa */
+    border: 2px solid #7b59b7; /* Cor da borda roxa */
+    border-radius: 5px; /* Borda arredondada */
+    padding: 40px; /* Espaçamento interno */
+    width: 100%;
 }
 
-.social-media img {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s ease;
+/* Estilos para a imagem à direita */
+.right-content {
+    flex: 1; /* Ocupar todo o espaço disponível à direita */
+    text-align: right; /* Alinhar a imagem à direita */
+    margin-left: 20px; /* Espaçamento entre a imagem e o texto */
 }
 
-.social-media img:hover {
-    transform: scale(1.2);
+.right-content img {
+    max-width: 100%; /* Garante que a imagem não fique maior que o espaço disponível */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Estilos para o texto à esquerda */
+.left-content {
+    flex: 1; /* Ocupar todo o espaço disponível à esquerda */
+    padding: 10px; /* Espaçamento interno do texto */
+    color: white; /* Cor do texto branco */
+    text-align: left; /* Alinhar o texto à esquerda */
+}
+
+
+
+
+.left-content .btn:hover {
+    background-color: #7b59b7;
+    color: white;
+}
+
+/* Estilos para a seção .imgs */
+.imgs {
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container {
+    text-align: center;
+    margin: 10px; /* Espaçamento entre as imagens */
+}
+
+
+/* Estilos para a seção .image-container img */
+
+.image-container img {
+ 
+    size-adjust: 20px;
+    margin-top: 60px;
+    
+
+    max-width: 50%;
+    height: auto;
+}
+
+.image-container h1, .image-container h2 {
+    font-size: 24px;
+    color: #7b59b7;
+    margin-top: 10px;
+}
+
+/* Estilos para a seção .imgss */
+.imgss {
+    margin-top: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.image-container img {
+    max-width: 80%;
+    height: auto;
+}
+
+.image-container h3, .image-container h4, .image-container h5, .image-container h6 {
+    font-size: 18px;
+    color: #7b59b7;
+    margin-top: 10px;
+}
+
+
+
+.bg-red {
+    background-color: red;
+}
+
+.bg-blue {
+    background-color: blue;
+}
+
+.bg-green {
+    background-color: green;
+}
+
+.bg-orange {
+    background-color: orange;
+}
+
+/* ... outros estilos ... */
+
+/* Estilos para a seção .image-container */
+.image-container {
+    text-align: center;
+    margin: 10px;
+    border: 2px solid #7b59b7;    
+    border-radius: 5px;
+    padding: 50px;
+    flex: 1;
+    max-width: calc(50% - 20px);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Estilos para a seção .image-container img */
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos para o texto das imagens coloridas */
+.image-container h1, .image-container h2 {
+    font-size: 24px;
+    color: #7b59b7;
+    margin-top: 10px;
+}
+
+.image-container {
+    text-align: center;
+    margin: 20px; /* Aumentei a margem para criar um "box" maior */
+    border: 2px solid #7b59b7;
+    border-radius: 5px;
+    padding: 60px; /* Aumentei o preenchimento para criar um "box" maior */
+    display: inline-block; /* Torna o contêiner do tamanho do conteúdo (imagem) */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Estilos para a seção .image-container img */
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove espaço extra abaixo da imagem */
+}
+
+/* Estilos para o texto das imagens coloridas */
+.image-container h1, .image-container h2 {
+    font-size: 24px;
+    color: #7b59b7;
+    margin-top: 10px;
+}
+
+/* Estilos para o hover das imagens coloridas */
+.image-container:hover {
+    background-color: #a084d9;
+    transform: scale(1.05);
+}
+
+/* Classe para desativar o hover em imagens específicas */
+.no-hover:hover {
+    background-color: #7b59b7;
+    transform: none;
+}
+
+/* Estilos para desativar o hover apenas na div com ID "2" */
+#2 .image-container:hover {
+    background-color: #7b59b7;
+    transform: none;
+}
+/* Estilos para o botão de rolar para o topo */
+.scroll-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px; 
+    width: 40px; /* Largura da imagem do botão */
+    height: 40px; /* Altura da imagem do botão */
+    background-image: url(img/upload.png);
+    background-size: cover; /* Garante que a imagem cubra todo o botão */
+    border: none;
+    border-radius: 50%; /* Faz com que o botão seja um círculo */
+    cursor: pointer;
+}
+
+.scroll-to-top-btn.show {
+    display: block;
 }

@@ -5,16 +5,31 @@ body {
     background-color: #000;
     color: #fff;
     display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    background-color: #4b0082;
+    padding: 10px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    flex: 1;
 }
 
 .form-container {
     background-color: #4b0082;
-    padding: 20px;
+    padding: 40px;
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.2);
+    width: 300px; /* Largura da caixa de login */
+    max-width: 100%;
+    height: auto;
 }
 
 .form-group {
@@ -30,9 +45,10 @@ body {
 }
 
 .form-group button {
+    width: 100%;
     background-color: #fff;
     color: #4b0082;
-    padding: 10px 20px;
+    padding: 10px;
     font-size: 18px;
     border: none;
     border-radius: 5px;

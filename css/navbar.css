@@ -1,0 +1,40 @@
+/* Estilos para a barra de navegação */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    padding: 10px 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.project-name {
+    color: white;
+    font-size: 24px;
+    float: left; /* Faz o nome do projeto flutuar à esquerda */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    color: #7b59b7;
+}
+
+.navbar a.btn {
+    background-color: #7b59b7;
+    border-radius: 5px;
+    float: right; /* Faz os botões de cadastro e login flutuarem à direita */
+    margin-right: 10px; /* Adiciona um pouco de margem à direita para afastar os botões */
+}
+
+.navbar a.btn:first-child {
+    margin-left: 10px; /* Adiciona espaçamento entre os botões se necessário */
+}
+
+.navbar a.btn:hover {
+    background-color: #a084d9;
+}
